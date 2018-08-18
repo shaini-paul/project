@@ -1,0 +1,75 @@
+<?
+//$fh = readfile("/opt/lampp/htdocs/picturethissite/master.txt", "r");
+//echo fpassthru($fh);
+
+ $ile_name= "/opt/lampp/htdocs/picturethissite/master.txt";
+// if (is_readable($filename)) {	
+//     $fh = fopen($filename, "r");
+//     # Processing
+//     fclose($fh);
+// }
+
+// $filename = "/opt/lampp/htdocs/picturethissite/master.txt";
+// if (is_readable($filename)) {
+//     echo 'The file is readable';
+// } else {
+//     echo 'The file is not readable';
+// }
+
+
+// $string = file_get_contents("/opt/lampp/htdocs/picturethissite/master.txt", "r");
+// //echo file_get_contents("/opt/lampp/htdocs/picturethissite/master.txt");
+// $myFile = "/opt/lampp/htdocs/picturethissite/master.txt" ;
+// $fh = fopen($myFile, 'w') or die("Could not open: " . mysql_error());
+// fwrite($fh, $string);
+// fclose($fh);
+
+// $handle = fopen("/opt/lampp/htdocs/picturethissite/master.txt","r");
+// static $b = 0;
+// while($a = fgets($handle)) {
+//     $b++;
+// }
+// echo $b;
+
+
+$fp= fopen("/opt/lampp/htdocs/picturethissite/master.txt", "r");
+$count=0;
+while($line = fgetss($fp)) // fgetss() is used to get a line from a file ignoring html tags
+$count++;
+echo "Total number of lines  are ".$count;
+fclose($fp);
+
+// $allowedColNum=5;
+// $batchcount=0;
+// $file = fopen("/opt/lampp/htdocs/picturethissite/master.txt", "r"); 
+// $totCols=0;
+// while ($line = fgetcsv($file))
+// if(count($line) > $totCols) $totCols = count($line);
+// fseek($file, 0);
+// while ($line = fgetcsv($file))
+// {
+// 	$line++;
+// 	echo "Total number of lines  are ".$line;
+//   //....
+// }
+// fclose($file);
+
+
+// $sql = mysql_connect("localhost", "root", "");
+// if (!$sql) {
+//     die("Could not connect: " . mysql_error());
+// }
+// mysql_select_db("picturethissite");
+// $result = mysql_query("LOAD DATA LOCAL INFILE '$myFile'" .
+//                       " INTO TABLE pt_products FIELDS TERMINATED BY '|'");
+// if (!$result) {
+//     die("Could not load. " . mysql_error());
+// }
+
+// $result = mysql_query("LOAD DATA INFILE '$uploaddir.'/'.$name' " .
+//                       " INTO TABLE pt_products FIELDS TERMINATED BY '|'");
+
+
+
+
+?>
